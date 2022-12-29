@@ -1,0 +1,449 @@
+@media screen and (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .section .aside {
+    width: 100% !important;
+  }
+  .section .comment {
+    width: 100% !important;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+.header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: #f8f9fc;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+.section .aside {
+  position: relative;
+  width: 20%;
+  margin: 0 10px 20px;
+  text-align: center;
+}
+.section .aside .user {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fc;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+.section .aside .user img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.section .aside .user p {
+  width: 100%;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.section .aside .login {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fc;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.section .aside .login .username,
+.section .aside .login .password {
+  height: 70px;
+  margin: 0 auto 10px;
+}
+.section .aside .login .username input,
+.section .aside .login .password input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 6px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #d4dcec;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.section .aside .login .username input::placeholder,
+.section .aside .login .password input::placeholder {
+  font-weight: 700;
+}
+.section .aside .login .username span,
+.section .aside .login .password span {
+  height: 14px;
+}
+.section .aside .login .username span p,
+.section .aside .login .password span p {
+  width: 100%;
+  height: 14px;
+  color: red;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.section .aside .login .submitLogin,
+.section .aside .login .registerBtn {
+  width: 100%;
+  height: 50px;
+  margin: 5px auto;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 10px;
+  background-color: #0665d0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  transition: all 0.2s ease;
+}
+.section .aside .login .submitLogin:hover,
+.section .aside .login .registerBtn:hover {
+  box-shadow: 0 0 10px #333;
+}
+.section .aside .login .remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+}
+.section .aside .login .remember input {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.section .aside .login .remember label {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  cursor: pointer;
+}
+.section .comment {
+  position: relative;
+  width: 60%;
+  margin: 0 10px;
+}
+.section .comment .flashBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #0665d0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.section .comment .flashBtn:hover {
+  opacity: 1;
+  box-shadow: 0 0 5px #333;
+}
+.section .comment .messageArea {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f8f9fc;
+  color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.section .comment .messageArea .messages {
+  width: 100%;
+  min-height: 500px;
+  max-height: 500px;
+  padding: 20px;
+  color: #333;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  /* 滚动条整体部分 */
+  /* 滚动条滑块 */
+}
+.section .comment .messageArea .messages::-webkit-scrollbar {
+  width: 15px;
+}
+.section .comment .messageArea .messages::-webkit-scrollbar-thumb {
+  background-color: #d4dcec;
+  border-radius: 10px;
+}
+.section .comment .messageArea .messages::-webkit-scrollbar-thumb:hover {
+  background-color: #0665d0;
+}
+.section .comment .messageArea .messages li {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+.section .comment .messageArea .messages li .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.section .comment .messageArea .messages li div {
+  flex: 1;
+  padding-left: 10px;
+  font-weight: 700;
+}
+.section .comment .messageArea .messages li div i {
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.section .comment .messageArea .messages li div p {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.section .comment .messageArea .messages li div p img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.section .comment .messageArea .messages li div span {
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  font-size: 16px;
+}
+.section .comment .messageArea .page {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+}
+.section .comment .textArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: #f8f9fc;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.section .comment .textArea .upload {
+  width: 100%;
+}
+.section .comment .textArea .upload .el-upload,
+.section .comment .textArea .upload .el-upload-list__item {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+.section .comment .textArea .texts {
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Microsoft YaHei', 'Heiti SC', Tahoma, Arial, 'Hiragino Sans GB', "\5B8B\4F53", sans-serif;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  scrollbar-gutter: stable both-edges;
+  outline: none;
+  resize: none;
+  cursor: auto;
+}
+.section .comment .textArea .texts::-webkit-scrollbar {
+  width: 15px;
+  scrollbar-gutter: stable both-edges;
+}
+.section .comment .textArea .texts::-webkit-scrollbar-thumb {
+  background-color: #d4dcec;
+  border-radius: 10px;
+}
+.section .comment .textArea .texts::-webkit-scrollbar-thumb:hover {
+  background-color: #0665d0;
+}
+.section .comment .textArea .submitMessage {
+  width: 50%;
+  height: 50px;
+  margin: 10px auto;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 10px;
+  background-color: #0665d0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  transition: all 0.5s ease;
+}
+.section .comment .textArea .submitMessage:hover {
+  box-shadow: 0 0 10px #333;
+}
+.register {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: 18px;
+  font-weight: 700;
+  transform: translateY(calc(50vh - 50%));
+  z-index: 2;
+}
+.register h2 {
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+.register .infoBoard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.register .infoBoard::before,
+.register .infoBoard::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  transition: clip-path 0.5s ease-in-out;
+  z-index: -2;
+}
+.register .infoBoard::before {
+  clip-path: inset(0 220px 220px 0);
+  transform: translate(-25px, -25px);
+}
+.register .infoBoard::after {
+  clip-path: inset(220px 0 0 220px);
+  transform: translate(15px, 15px);
+}
+.register .infoBoard div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  margin: 5px auto 5px;
+  line-height: 50px;
+}
+.register .infoBoard div input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 6px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #d4dcec;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  outline: none;
+}
+.register .infoBoard div input::placeholder {
+  font-weight: 700;
+}
+.register .infoBoard div span {
+  height: 14px;
+}
+.register .infoBoard div span p {
+  width: 100%;
+  height: 14px;
+  color: red;
+  font-size: 14px;
+  line-height: 14px;
+}
+.register .btns {
+  width: 100%;
+  height: 120px !important;
+  text-align: center;
+}
+.register .btns .submitBtn,
+.register .btns .returnBtn {
+  width: 100%;
+  height: 50px;
+  margin: 5px auto;
+  border: 0;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.register .btns .submitBtn:hover,
+.register .btns .returnBtn:hover {
+  box-shadow: 0 0 10px #333;
+}
+.register .btns .submitBtn {
+  background-color: #0665d0;
+}
+.register .btns .returnBtn {
+  background-color: grey;
+}

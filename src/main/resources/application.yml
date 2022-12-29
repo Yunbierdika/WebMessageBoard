@@ -1,0 +1,40 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lyb
+    username: root
+    password: 1234
+    # 下面为连接池的补充设置，应用到上面所有数据源中
+    # 初始化大小，最小，最大
+    druid:
+      initial-size: 10
+      max-active: 20
+      min-idle: 10
+      time-between-eviction-runs-millis: 6000
+      max-wait: 6000
+      min-evictable-idle-time-millis: 6000
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis:
+  mapper-locations: classpath:com/rsj/mapper/*.xml
+  type-aliases-package: com.rsj.pojo
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
+    # 控制台打印日志
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#mybatis-plus:
+#  configuration:
+#    # 控制台打印日志
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+message-board:
+  upload-path: D:\upload\
