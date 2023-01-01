@@ -53,7 +53,7 @@ window.addEventListener('load', function() {
                     let jsonData = JSON.stringify(this.writer);
                     let _this = this;
                     ajax.post({
-                        url: "http://localhost/msg/",
+                        url: "http://39.108.62.108/msg/",
                         data: jsonData,
                         onSuccess: function(result) {
                             if (result == 'true') {
@@ -107,7 +107,7 @@ window.addEventListener('load', function() {
             selectAll() {
                 let _this = this;
                 ajax.get({
-                    url: "http://localhost/msg/page?page=" + _this.currentPage + "&pageSize=" + _this.pageSize,
+                    url: "http://39.108.62.108/msg/page?page=" + _this.currentPage + "&pageSize=" + _this.pageSize,
                     onSuccess: function(result) {
                         let data = JSON.parse(result);
                         _this.messages = data.data.records;
@@ -206,7 +206,7 @@ window.addEventListener('load', function() {
 
             let jsonData = JSON.stringify(user);
             ajax.post({
-                url: "http://localhost/user/login/",
+                url: "http://39.108.62.108/user/login/",
                 data: jsonData,
                 onSuccess: function(result) {
                     let data = JSON.parse(result);
@@ -264,7 +264,7 @@ window.addEventListener('load', function() {
             } else {
                 let jsonData = JSON.stringify(vm.writer);
                 ajax.post({
-                    url: "http://localhost/msg/",
+                    url: "http://39.108.62.108/msg/",
                     data: jsonData,
                     onSuccess: function(result) {
                         if (result == true) {
@@ -314,7 +314,7 @@ window.addEventListener('load', function() {
                 checkUsername = false;
         } else {
             ajax.get({
-                url: "http://localhost/user/username=" + this.value,
+                url: "http://39.108.62.108/user/username=" + this.value,
                 onSuccess: function(result) {
                     let data = JSON.parse(result);
                     if (data.data == true) {
@@ -352,7 +352,7 @@ window.addEventListener('load', function() {
                 checkQQ = true;
         } else {
             ajax.get({
-                url: "http://localhost/user/qq=" + this.value,
+                url: "http://39.108.62.108/user/qq=" + this.value,
                 onSuccess: function(result) {
                     let data = JSON.parse(result);
                     if (data.data == true) {
@@ -377,7 +377,7 @@ window.addEventListener('load', function() {
 
             let jsonData = JSON.stringify(user);
             ajax.post({
-                url: "http://localhost/user/register/",
+                url: "http://39.108.62.108/user/register/",
                 data: jsonData,
                 onSuccess: function(result) {
                     let data = JSON.parse(result);

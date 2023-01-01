@@ -37,4 +37,4 @@ mybatis:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 message-board:
-  upload-path: D:\upload\
+  upload-path: \usr\local\app\upload\
